@@ -145,7 +145,7 @@ async def main(event,Bot,STRING_HASH,APP_ID,APP_HASH):
                     driver.get(url)
 
                     id = posts.messages[0].id
-                    driver.find_element_by_tag_name("")
+                    
 
                     r = c.get(url, headers=ua, timeout=65, allow_redirects=True)
                     soup = BeautifulSoup(r.content, "html.pasrser")
