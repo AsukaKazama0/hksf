@@ -83,7 +83,7 @@ async def main(event,Bot,STRING_HASH,APP_ID,APP_HASH):
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
-    CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+    CHROMEDRIVER_PATH = os.environ.get("GOOGLE_CHROME_PATH")
     print(CHROMEDRIVER_PATH)
     driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,options=chrome_options)
     client = TelegramClient(StringSession(STRING_HASH), str(APP_ID),APP_HASH)
