@@ -1,0 +1,7 @@
+python-decouple
+telethon
+schedule
+bs4
+requests
+telethon
+selenium
